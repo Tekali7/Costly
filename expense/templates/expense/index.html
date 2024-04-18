@@ -10,7 +10,7 @@
     <h1>Your expenses</h1>
     <ul>
         {% for expense in expenses %}
-            <li>{{ expense.name }} - {{ expense.amount }}</li>
+            <li>{{ expense.item }} - {{ expense.amount }}</li>
         {% endfor %}
     </ul>
 </body>
