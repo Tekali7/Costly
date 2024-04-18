@@ -16,9 +16,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from expense import views as expense_views
 
 urlpatterns = [
-    path("expense/", expense_views.cost, name='expense'),
+    path("expense/", include("expense.urls"), name='index'),
     path('admin/', admin.site.urls),
 ]

@@ -1,0 +1,17 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Costly</title>
+</head>
+<body>
+    <h1>Your expenses</h1>
+    <ul>
+        {% for expense in expenses %}
+            <li>{{ expense.name }} - {{ expense.amount }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
