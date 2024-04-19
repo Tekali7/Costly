@@ -6,7 +6,6 @@ from django.contrib.auth.models import User
 class Expense(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     item = models.CharField(max_length=30, unique=True)
-    slug = models.SlugField(max_length=200, unique=True)
     currency_choices = [
         ('USD', 'USD'),
         ('EUR', 'EUR'),
