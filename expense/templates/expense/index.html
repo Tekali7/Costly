@@ -1,17 +1,12 @@
-<!-- index.html -->
+{% extends 'base.html' %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Costly</title>
-</head>
-<body>
-    <h1>Your expenses</h1>
+{% block title %}Expense summary{% endblock %}
+
+{% block content %}
+    <h1 class="display-3">Your expenses</h1>
     <ul>
         {% for expense in expenses %}
             <li>{{ expense.item }} - {{ expense.amount }}</li>
         {% endfor %}
     </ul>
-</body>
-</html>
+{% endblock %}
