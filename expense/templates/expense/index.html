@@ -3,10 +3,14 @@
 {% block title %}Expense summary{% endblock %}
 
 {% block content %}
-    <h1 class="display-3">Your expenses</h1>
-    <ul>
+    <h1 class="display-4 text-center">Your expenses</h1>
+    <ul class="expenses-list">
         {% for expense in expenses %}
-            <li>{{ expense.item }} - {{ expense.amount }}</li>
+            <li class="expense-item">
+                <span class="expense-item-name">{{ expense.item }}</span>  
+                <span class="expense-item-amount">{{ expense.amount }}</span>
+                <span class="expense-item-currency">{{ expense.currency }}</span>
+            </li>
         {% endfor %}
     </ul>
 {% endblock %}
