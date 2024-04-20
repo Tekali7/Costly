@@ -1,0 +1,22 @@
+.expenses-list {
+    list-style: none;
+}
+
+.expense-item {
+    border: 1px solid #ccc;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.expense-item-name {
+    flex-grow: 1;
+}
+
+.expense-item-amount {
+    padding-right: 15px;
+}
+
+.expense-item-currency {
+    font-weight: bold;
+}
