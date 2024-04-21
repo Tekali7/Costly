@@ -28,7 +28,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, "templates")
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['8000-tekali7-costly-djoaaspqntc.ws-eu110.gitpod.io', '.herokuapp.com']
 
@@ -50,8 +50,8 @@ INSTALLED_APPS = [
 ]
 
 SITE_ID = 1
-LOGIN_REDIRECT_URL = '/'    # Redirection after login
-LOGOUT_REDIRECT_URL = '/'   # Redirection after logout
+LOGIN_REDIRECT_URL = 'expense/'
+LOGOUT_REDIRECT_URL = '/accounts/login/'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

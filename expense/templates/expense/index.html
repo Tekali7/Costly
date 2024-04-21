@@ -3,25 +3,35 @@
 {% block title %}Expense summary{% endblock %}
 
 {% block content %}
-    <div class="container">
-        <div class="row mb-3">
-            <div class="col text-right">
-                <a href="#" class="btn btn-success">Add Expense</a> <!-- Add url "add_expense" for # later-->
+    {% if user.is_authenticated %}
+        <div class="container">
+            <div class="row mb-3">
+                <div class="col text-right">
+                    <a href="#" class="btn btn-success">Add Expense</a> <!-- Add url "add_expense" for # later-->
+                </div>
+            </div>
+            <h1 class="display-4 text-center">Your expenses</h1>
+            <ul class="expenses-list">
+                {% for expense in expenses %}
+                    <li class="expense-item">
+                        <div class="expense-item-buttons">
+                            <button class="btn btn-primary edit-expense" data-edit-id="{{ expense.id }}">Edit</button>
+                            <button class="btn btn-danger delete-expense mr-3" data-delete-id="{{ expense.id }}">Delete</button>
+                        </div>
+                        <span class="expense-item-name">{{ expense.item }}</span>  
+                        <span class="expense-item-amount">{{ expense.amount }}</span>
+                        <span class="expense-item-currency">{{ expense.currency }}</span>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% else %}
+        <div class="container">
+            <div class="row">
+                <div class="col text-center">
+                    <p>Please <a href="{% url 'account_login' %}">log in</a> to view your expenses.</p>
+                </div>
             </div>
         </div>
-        <h1 class="display-4 text-center">Your expenses</h1>
-        <ul class="expenses-list">
-            {% for expense in expenses %}
-                <li class="expense-item">
-                    <div class="expense-item-buttons">
-                        <button class="btn btn-primary edit-expense" data-edit-id="{{ expense.id }}">Edit</button>
-                        <button class="btn btn-danger delete-expense mr-3" data-delete-id="{{ expense.id }}">Delete</button>
-                    </div>
-                    <span class="expense-item-name">{{ expense.item }}</span>  
-                    <span class="expense-item-amount">{{ expense.amount }}</span>
-                    <span class="expense-item-currency">{{ expense.currency }}</span>
-                </li>
-            {% endfor %}
-        </ul>
-    </div>
+    {% endif %}
 {% endblock %}
