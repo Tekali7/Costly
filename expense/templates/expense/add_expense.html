@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}Add Expense{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1 class="display-4 text-center">Add Expense</h1>
+    <form method="post" action="{% url 'add_expense' %}">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="id_item" class="form-label">Item</label>
+            {{ form.item }}
+        </div>
+        <div class="mb-3">
+            <label for="id_amount" class="form-label">Amount</label>
+            {{ form.amount }}
+        </div>
+        <div class="mb-3">
+            <label for="id_currency" class="form-label">Currency</label>
+            {{ form.currency }}
+        </div>
+        <button type="submit" class="btn btn-primary">Add Expense</button>
+    </form>
+</div>
+{% endblock %}
