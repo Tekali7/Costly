@@ -49,7 +49,7 @@ INSTALLED_APPS = [
 ]
 
 SITE_ID = 1
-LOGIN_REDIRECT_URL = 'expense/'
+LOGIN_REDIRECT_URL = '/expense/'
 LOGOUT_REDIRECT_URL = '/accounts/login/'
 
 MIDDLEWARE = [

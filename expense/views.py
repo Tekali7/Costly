@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
+from django.contrib import messages
 from django import forms
 from .models import Expense
 
@@ -22,18 +23,19 @@ class ExpenseForm(forms.ModelForm):
         fields = ['item', 'amount', 'currency']
 
 
+@login_required
 def add_expense(request):
     if request.method == 'POST':
-        form = forms.Form(request.POST)
+        form = ExpenseForm(request.POST)
         if form.is_valid():
-            item = form.cleaned_data['item']
-            amount = form.cleaned_data['amount']
-            currency = form.cleaned_data['currency']
-            if item and amount and currency:
-                expense = Expense.objects.create(item=item, amount=amount, currency=currency, user=request.user)
-                return redirect('expense')
-            else:
-                form.add_error(None, 'All fields are required.')
+            expense = form.save(commit=False)
+            expense.user = request.user
+            expense.save()
+            messages.add_message(
+                request, messages.SUCCESS,
+                'Expense added successfully!'
+            )
+            return redirect('index')
     else:
         form = ExpenseForm()
     return render(request, 'expense/add_expense.html', {'form': form})
