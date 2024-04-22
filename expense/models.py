@@ -19,8 +19,8 @@ class Expense(models.Model):
     amount = models.DecimalField(max_digits=10, decimal_places=2)
     created_at = models.DateTimeField(auto_now_add=True)
 
-class Meta:
-        ordering = ["-amount"]
+    class Meta:
+            ordering = ["-amount"]
 
-def __str__(self):
-    return self.item
+    def __str__(self):
+        return self.item

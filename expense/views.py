@@ -4,6 +4,7 @@ from django.http import HttpResponse
 from django.contrib import messages
 from django import forms
 from .models import Expense
+from .forms import ExpenseForm
 
 # Create your views here.
 
@@ -17,18 +18,12 @@ def index(request):
     })
 
 
-class ExpenseForm(forms.ModelForm):
-    class Meta:
-        model = Expense
-        fields = ['item', 'amount', 'currency']
-
-
 @login_required
 def add_expense(request):
     if request.method == 'POST':
-        form = ExpenseForm(request.POST)
-        if form.is_valid():
-            expense = form.save(commit=False)
+        expense_form = ExpenseForm(data=request.POST)
+        if expense_form.is_valid():
+            expense = expense_form.save(commit=False)
             expense.user = request.user
             expense.save()
             messages.add_message(
@@ -37,5 +32,6 @@ def add_expense(request):
             )
             return redirect('index')
     else:
-        form = ExpenseForm()
-    return render(request, 'expense/add_expense.html', {'form': form})
+        expense_form = ExpenseForm()
+
+    return render(request, 'expense/add_expense.html', {'expense_form': expense_form})
