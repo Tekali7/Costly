@@ -38,6 +38,7 @@ def add_expense(request):
     return render(request, 'expense/add_expense.html', {'expense_form': expense_form})
 
 
+########################################################################################################################
 # Edit an expense
 # @login_required
 # def edit_expense(request, expense_id):
@@ -78,4 +79,16 @@ def edit_expense(request, edit_id):
         expense_form = ExpenseForm(instance=expense)
 
     return render(request, 'edit_expense.html', {'form': expense_form})
-        
+
+
+########################################################################################################################
+@login_required
+def delete_expense(request, expense_id):
+    expense = get_object_or_404(Expense, pk=expense_id)
+    if request.method == 'POST':
+        expense.delete()
+        return redirect('index')
+    
+    return redirect()
+    
+    
