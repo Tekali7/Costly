@@ -18,6 +18,7 @@ def index(request):
     })
 
 
+# Add an expense
 @login_required
 def add_expense(request):
     if request.method == 'POST':
@@ -35,3 +36,24 @@ def add_expense(request):
         expense_form = ExpenseForm()
 
     return render(request, 'expense/add_expense.html', {'expense_form': expense_form})
+
+
+# Edit an expense
+def edit_expense(request, expense_id):
+    expense = get_object_or_404(Expense, pk=expense_id)
+
+    if request.method == 'POST':
+        form = ExpenseForm(request.POST, instance=expense)
+        if form.is_valid():
+            form.save()
+            return redirect('index')
+
+    else:
+        form = ExpenseForm(instance=expense)
+
+    context = {
+        'form': form,
+        'expense_id': expense_id
+    }
+    
+    return render(request, 'edit_expense.html', context)

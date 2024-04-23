@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block title %}Edit Expense{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1 class="display-4 text-center">Edit Expense</h1>
+    <form method="post" action="{% url 'edit_expense' expense_id=expense_id %}">
+        {% csrf_token %}
+        {{ expense_form | crispy }}
+        <button type="submit" class="btn btn-primary">Save Changes</button>
+    </form>
+</div>
+{% endblock %}
