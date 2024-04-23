@@ -14,8 +14,8 @@
             {% for expense in expenses %}
                 <li class="expense-item">
                     <div class="expense-item-buttons">
-                        <button class="btn btn-primary edit-expense" data-edit-id="{{ expense.id }}">Edit</button>
-                        <button class="btn btn-danger delete-expense mr-3" data-delete-id="{{ expense.id }}">Delete</button>
+                        <button class="btn btn-primary edit-expense" data-expense-id="{{ expense.id }}">Edit</button>
+                        <button class="btn btn-danger delete-expense mr-3" data-expense-id="{{ expense.id }}">Delete</button>
                     </div>
                     <span class="expense-item-name">{{ expense.item }}</span>  
                     <span class="expense-item-amount">{{ expense.amount }}</span>
