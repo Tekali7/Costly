@@ -7,7 +7,7 @@
 {% block content %}
 <div class="container">
     <h1 class="display-4 text-center">Edit Expense</h1>
-    <form class="edit-expense" id="expenseForm" method="post" action="{% url 'edit_expense' expense_id=expense_id %}">
+    <form class="edit-expense" id="expenseForm" method="post" action="{% url 'edit_expense' edit_id=edit_id %}">
         {% csrf_token %}
         {{ expense_form | crispy }}
         <button id="submitButton" type="submit" class="btn btn-primary">Save Changes</button>

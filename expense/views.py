@@ -64,7 +64,7 @@ def add_expense(request):
 
 @login_required
 def edit_expense(request, edit_id):
-    expense = get_object_or_404(Expense, pk=edit_id)
+    expense = get_object_or_404(Expense, pk=edit_id, user=request.user)
 
     if request.method == "POST":
         expense_form = ExpenseForm(data=request.POST, instance=expense)
