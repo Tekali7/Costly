@@ -15,6 +15,9 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
+from django.conf import settings
+from django.conf.urls.static import static
+from .views import handler404, handler500, handler403, handler405
 from django.urls import path, include
 
 urlpatterns = [
@@ -22,3 +25,8 @@ urlpatterns = [
     path("accounts/", include("allauth.urls")),
     path('admin/', admin.site.urls),
 ]
+
+handler404 = 'costly.views.handler404'
+handler500 = 'costly.views.handler500'
+handler403 = 'costly.views.handler403'
+handler405 = 'costly.views.handler405'
