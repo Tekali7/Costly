@@ -10,9 +10,10 @@
                 <a href="{% url 'add_expense' %}" class="btn btn-success">Add Expense</a>
             </div>
         </div>
-        <h1 class="display-4 text-center">Your expenses</h1>
+        <h1 class="display-5 text-center">Your expenses</h1>
         <ul class="expenses-list">
             {% for expense in expenses %}
+                     <!--List elements-->
                 <li class="expense-item">
 
                     <!--Edit and Delete Buttons-->
@@ -21,8 +22,6 @@
                         <button class="btn btn-danger delete-expense mr-3" data-expense-id="{{ expense.id }}">Delete</button>
                     </div>
                     <!--Edit and Delete Buttons-->
-
-                    <!--List elements-->
                     <span class="expense-item-name">{{ expense.item }}</span>  
                     <span class="expense-item-amount">{{ expense.amount }}</span>
                     <span class="expense-item-currency">{{ expense.currency }}</span>
