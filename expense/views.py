@@ -1,20 +1,24 @@
 from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse, HttpResponseRedirect
+from django.db.models import Sum
 from django.contrib import messages
 from django import forms
 from .models import Expense
 from .forms import ExpenseForm
 
 # Create your views here.
+"""
 
+"""
 @login_required
 def index(request):
     expenses = Expense.objects.filter(user=request.user)
+    total_amount = expenses.aggregate(total=Sum('amount'))['total']  # Calculate total amount for the user
 
-    return render(request,
-    "expense/index.html", {
-    "expenses": expenses
+    return render(request, "expense/index.html", {
+        "expenses": expenses,
+        "total_amount": total_amount,
     })
 
 

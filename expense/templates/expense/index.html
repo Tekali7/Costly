@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %}Expense summary{% endblock %}
+{% block title %}Costly{% endblock %}
 
 {% block content %}
     <div class="container">
@@ -14,19 +14,32 @@
         <ul class="expenses-list">
             {% for expense in expenses %}
                 <li class="expense-item">
+
+                    <!--Edit and Delete Buttons-->
                     <div class="expense-item-buttons">
                         <a href="{% url 'edit_expense' edit_id=expense.id %}" class="btn btn-primary">Edit</a>
                         <button class="btn btn-danger delete-expense mr-3" data-expense-id="{{ expense.id }}">Delete</button>
                     </div>
+                    <!--Edit and Delete Buttons-->
+
+                    <!--List elements-->
                     <span class="expense-item-name">{{ expense.item }}</span>  
                     <span class="expense-item-amount">{{ expense.amount }}</span>
                     <span class="expense-item-currency">{{ expense.currency }}</span>
                 </li>
+                    <!--List elements-->
             {% endfor %}
+            <!--Total cost-->
+            <li class="expense-item total-cost">
+                <span class="total-cost-label">Your total costs are:</span>
+                <span class="total-cost-amount">
+                    {{ total_amount|default:"0" }}
+                </span>
+            </li>
+            <!--Total cost-->
         </ul>
     </div>
-
-    <!-- Delete confirmation modal -->
+    
 <!-- Delete confirmation modal -->
 <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
     <div class="modal-dialog">
