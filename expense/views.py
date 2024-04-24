@@ -65,11 +65,9 @@ def edit_expense(request, edit_id):
 ########################################################################################################################
 @login_required
 def delete_expense(request, expense_id):
-    expense = get_object_or_404(Expense, pk=expense_id)
-    if request.method == 'POST':
+    expense = get_object_or_404(Expense, pk=expense_id, user=request.user)
+    if request.method == "POST":
         expense.delete()
+        messages.success(request, 'Expense deleted successfully!')
         return redirect('index')
-    
-    return redirect()
-    
-    
+    return redirect('index')
