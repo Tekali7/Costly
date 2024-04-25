@@ -1,3 +1,11 @@
+.navbar-brand {
+    font-family: serif;
+}
+
+h1 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
 .expenses-list {
     list-style: none;
 }

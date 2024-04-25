@@ -82,3 +82,33 @@ The authentication features include Sign In, Sign up and Sign out.
 ![Sign Up](static/images/readme-imgs/sign-up.PNG)
 ### Sign Out
 ![Sign Out](static/images/readme-imgs/sign-out.PNG)
+
+# Future features
+
+Future features might include.
+
+- Total cost that calculates all currencies together with consideration of their current exchange rates.
+
+- Analytics that analyze a users spending habits over time to let them know where they could improve.
+
+- Reminders for open payments or upcoming bills.
+
+# Design
+## Color
+![Color](static/images/readme-imgs/color.PNG)
+![Contrast](static/images/readme-imgs/contrast.PNG)
+
+The app adopts a dark color scheme to provide contrast and ensure visibility against the background. This choice helps users quickly locate features and enhances overall usability.
+
+## Typography
+The app name stands out with a simple serif font in the navbar, and the 'page/form titles' stand out with 'Franklin Gothic Medium'.
+Other than that the default font has been left.
+
+# Wireframes
+## Entity relationship diagram
+![ERD](static/images/readme-imgs/erd.PNG)
+
+## User interface
+![UI](static/images/readme-imgs/wireframe.PNG)
+
+
