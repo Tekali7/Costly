@@ -15,13 +15,12 @@ The Costly app is here to let a user better organize, display, edit and delete t
 The user demographic for an expense tracking app typically includes people from many age groups, families managing household finances, and small business owners tracking business expenses. These users look for ways to gain better control over their finances, track spending habits, and achieve their financial goals.
 
 # User experience
-
-    As a user, I want to be able to:
-    - Securely log in to my account using authentication credentials.
-    - Access and view my own expenses.
-    - Add new expenses.
-    - Edit or update details of my existing expenses.
-    - Ensure that my financial data remains private and secure.
+As a user, I want to be able to:
+- Securely log in to my account using authentication credentials.
+- Access and view my own expenses.
+- Add new expenses.
+- Edit or update details of my existing expenses.
+- Ensure that my financial data remains private and secure.
 
 # Agile methodology
 
@@ -49,3 +48,37 @@ This epic focuses on providing users with secure access to their accounts while 
 This epic emphasizes optimizing the UI of the app. It involves the users need for a clean and easy to navigate page. Additionally, the epic focuses on implementing feedback features such as messages when the user adds, edits or deletes an expense. The user should also get a deletion modal upon clicking the delete button, which asks the user to confirm the deletion of an expense. By prioritizing UI enhancements and feedback, this epic aims to raise user satisfaction, and overall app usability.
 - [User Story #7 Friendly UI](<https://github.com/Tekali7/Costly/issues/7>)
 - [User Story #9 User feedback](<https://github.com/Tekali7/Costly/issues/9>)
+
+# Features
+The app consists of one main page with many features for the user.
+
+## Add expenses
+Adds a new expense to the list of expenses including the amount and currency.
+![Add expense](static/images/readme-imgs/add-expense.PNG)
+
+## Edit expenses
+Edit an existing expense either the expense name, amount or currency.
+![Edit expense](static/images/readme-imgs/edit-expense.PNG)
+
+## Delete expenses
+Delete an expense, the user is asked to confirm on a modal before deletion.
+![Delete expense](static/images/readme-imgs/delete-expense.PNG)
+
+## Total cost overview
+The total amount of all the expenses is displayed on the bottom of the list for transparency.
+![Total cost](static/images/readme-imgs/total-cost.PNG)
+
+## User-Friendly Interface
+The UI is user-friendly, simple and therefore easy to navigate.
+![User Interface](static/images/readme-imgs/user-interface.PNG)
+
+## Secure authentication
+Robust authentication measures were taken place to safely store each users private data.
+Every user needs to authenticate themselves before accessing the features and data.
+The authentication features include Sign In, Sign up and Sign out.
+### Sign In
+![Sign In](static/images/readme-imgs/sign-in.PNG)
+### Sign Up
+![Sign Up](static/images/readme-imgs/sign-up.PNG)
+### Sign Out
+![Sign Out](static/images/readme-imgs/sign-out.PNG)
