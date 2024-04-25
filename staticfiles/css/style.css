@@ -24,3 +24,29 @@
 .delete-expense {
     margin-right: 15px;
 }
+
+.total-cost {
+    padding-bottom: 50px;
+}
+
+/*------------------------------------------------------------
+-------------------Media query less than 425px----------------
+------------------------------------------------------------*/
+
+@media (max-width: 425px) {
+    .expense-item-buttons {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column-reverse;
+    }
+}
+
+/*------------------------------------------------------------
+-------------------Media query less than 400px----------------
+------------------------------------------------------------*/
+
+@media (max-width: 400px) {
+    .expense-item-small {
+        display: grid;
+    }
+}

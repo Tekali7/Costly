@@ -18,6 +18,13 @@
     <div class="row">
         <div class="col-md-6 mt-4 offset-md-3">
             <form class="login" method="POST" action="{% url 'account_login' %}">
+                <style>
+                    .login label,
+                    .login input {
+                        display: block;
+                        margin-bottom: 5px;
+                    }
+                </style>
                 {% csrf_token %}
                 {{ form.as_p }}
                 {% if redirect_field_value %}

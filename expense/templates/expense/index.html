@@ -7,7 +7,7 @@
 <!-- index.html content starts here -->
     <div class="container">
         <div class="row mb-3">
-            <div class="col text-right">
+            <div class="col d-flex justify-content-end">
                 <a href="{% url 'add_expense' %}" class="btn btn-success">Add Expense</a>
             </div>
         </div>
@@ -21,9 +21,11 @@
                         <a href="{% url 'edit_expense' edit_id=expense.id %}" class="btn btn-primary">Edit</a>
                         <button class="btn btn-danger delete-expense mr-3" data-expense-id="{{ expense.id }}">Delete</button>
                     </div>
-                    <span class="expense-item-name">{{ expense.item }}</span>  
-                    <span class="expense-item-amount">{{ expense.amount }}</span>
-                    <span class="expense-item-currency">{{ expense.currency }}</span>
+                    <div class="expense-item-small">
+                        <span class="expense-item-name">{{ expense.item }}</span>  
+                        <span class="expense-item-amount">{{ expense.amount }}</span>
+                        <span class="expense-item-currency">{{ expense.currency }}</span>
+                    </div>
                 </li>
             {% endfor %}
             <!--Total cost-->
