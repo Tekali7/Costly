@@ -111,4 +111,54 @@ Other than that the default font has been left.
 ## User interface
 ![UI](static/images/readme-imgs/wireframe.PNG)
 
+# Technology
+
+## Languages
+
+- HTML 5
+- CSS 3
+- JavaScript
+- Django
+- Python
+
+## Django Packages
+
+- Gunicorn: As the server for Heroku
+
+- Dj_database_url: To parse the database URL from the environment variables in Heroku
+
+- Psycopg2: As an adaptor for Python and DB
+
+- Allauth: For authentication, registration and account management
+
+- Crispy Forms: To style the forms
+
+## Frameworks - Libraries - Programs Used
+
+- Bootstrap: Was used to style the app
+
+- Jquery: All the scripts were written using jquery library
+
+- Git: Git was used for version control by utilizing the Gitpod terminal to commit to Git and push to GitHub
+
+- GitHub: GitHub is used to store the project's code after being pushed from Git
+
+- Heroku: Heroku was used to deploy the live project
+
+- PostgreSQL: With ElephantSQL through Heroku
+
+- Gitpod: Gitpod was used to create and edit the app
+
+- Lucidchart: Lucidchart was used to create the database diagram
+
+- PEP8: PEP8 was used to validate all the Python code
+
+- W3C - HTML: W3C- HTML was used to validate all the HTML code
+
+- W3C - CSS: W3C - CSS was used to validate the CSS code
+
+- Google Chrome Dev Tools: To check App responsiveness and debugging
+
+# Testing
+The tests can be found [here](<https://github.com/Tekali7/Costly/blob/main/TESTS.md>)
 
