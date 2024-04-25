@@ -1,8 +1,8 @@
 from django.shortcuts import render
 
-"""
-Custom error handling views for handling HTTP errors in Django.
-"""
+
+# Custom error handling views for handling HTTP errors in Django.
+
 def handler404(request, exception):
     """
     **handler404**
