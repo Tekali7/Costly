@@ -83,7 +83,7 @@ The authentication features include Sign In, Sign up and Sign out.
 ### Sign Out
 ![Sign Out](static/images/readme-imgs/sign-out.PNG)
 
-# Future features
+## Future features
 
 Future features might include.
 
@@ -92,6 +92,14 @@ Future features might include.
 - Analytics that analyze a users spending habits over time to let them know where they could improve.
 
 - Reminders for open payments or upcoming bills.
+
+## Bug Fixes
+- Bug: Two different users can't name their items the same.
+
+  - Working solution: Remove 'unique=True' from the item field in the Model.
+
+- Bug: User can't add an expense.
+  - Working solution: Clean up forms file and add widgets.
 
 # Design
 ## Color
@@ -229,3 +237,14 @@ The tests can be found [here](<https://github.com/Tekali7/Costly/blob/main/TESTS
 6. Type 'git clone' and paste the URL copied in step 3
 7. Press 'Enter' and the project is cloned
 
+# Credits
+
+- The delete confirmation modal was adapted from the walkthrough project.
+- The HTML for displaying Django messages was adapted from the walkthrough project.
+- The 10 lines in the base template's main section were adapted from the walkthrough project.
+- The header was adapted from the walkthrough project.
+
+- I found a lot of information about Django's urls, forms, models etc on the [Django Documentation](<https://docs.djangoproject.com/en/5.0/>).
+- My Mentor Brian Macharia taught me about aggregation, styling and authentication.
+
+- The remainder of the code was written by me with the help from the mentioned Documentation and also [Stackoverflow](<https://stackoverflow.com/>) to solve problems.
