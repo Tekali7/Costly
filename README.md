@@ -162,3 +162,70 @@ Other than that the default font has been left.
 # Testing
 The tests can be found [here](<https://github.com/Tekali7/Costly/blob/main/TESTS.md>)
 
+# Project Creation
+## Creating the Django app
+
+1. Go to the Code Institute Gitpod Full Template [Template](https://github.com/Code-Institute-Org/gitpod-full-template)
+2. Click on Use This Template
+3. Once the template is available in your repository click on Gitpod
+4. When the image for the template and the Gitpod are ready open a new terminal to start a new Django App
+5. Install Django and gunicorn: `pip3 install django gunicorn`
+6. Install supporting database libraries dj_database_url and psycopg2 library: `pip3 install dj_database_url psycopg2`
+7. Create file for requirements: in the terminal window type `pip freeze --local > requirements.txt`
+8. Create project: in the terminal window type django-admin startproject your_project_name
+9. Create app: in the terminal window type python3 manage.py startapp your_app_name
+10. Add app to the list of installed apps in settings.py file: you_app_name
+11. Migrate changes: in the terminal window type python3 manage.py migrate
+12. Run the server to test if the app is installed, in the terminal window type python3 manage.py runserver
+13. If the app has been installed correctly the window will display The install worked successfully! Congratulations!
+
+## Deployment of This Project
+
+* This site was deployed by completing the following steps:
+
+1. Log in to [Heroku](https://id.heroku.com) or create an account
+2. On the main page click the button labelled New in the top right corner and from the drop-down menu select Create New App
+3. You must enter a unique app name
+4. Next select your region
+5. Click on the Create App button
+6. Click in resources and select Heroku Postgres database
+7. Click Reveal Config Vars and add a new record with SECRET_KEY
+8. Click Reveal Config Vars and add a new record with the `CLOUDINARY_URL`
+9. Click Reveal Config Vars and add a new record with the `DISABLE_COLLECTSTATIC = 1`
+10. The next page is the project’s Deploy Tab. Click on the Settings Tab and scroll down to Config Vars
+11. Next, scroll down to the Buildpack section click Add Buildpack select python and click Save Changes
+12. Scroll to the top of the page and choose the Deploy tab
+13. Select Github as the deployment method
+14. Confirm you want to connect to GitHub
+15. Search for the repository name and click the connect button
+16. Scroll to the bottom of the deploy page and select the preferred deployment type
+17. Click either Enable Automatic Deploys for automatic deployment when you push updates to Github or click Manual Deploys
+
+## Final Deployment 
+
+1. Create a runtime.txt `python-3.12.3`
+2. Create a Procfile `web: gunicorn your_project_name.wsgi`
+3. When development is complete change the debug setting to: `DEBUG = False` in settings.py
+4. If you use the summernote editor add this for it to work on Heroku: `X_FRAME_OPTIONS = SAMEORIGIN ` to settings.py.
+5. In Heroku settings, delete the config vars for `DISABLE_COLLECTSTATIC = 1`
+
+## Forking This Project
+
+* Fork this project by following the steps:
+
+1. Open [GitHub](https://github.com/Tekali7/Costly)
+2. Find the 'Fork' button at the top right of the page
+3. Once you click the button the fork will be in your repository
+
+## Cloning This Project
+
+* Clone this project by following the steps:
+
+1. Open [GitHub](https://github.com/Tekali7/Costly)
+2. You will be provided with three options to choose from, HTTPS, SSH or GitHub CLI, click the clipboard icon in order to copy the URL
+3. Once you click the button the fork will be in your repository
+4. Open a new terminal
+5. Change the current working directory to the location that you want the cloned directory
+6. Type 'git clone' and paste the URL copied in step 3
+7. Press 'Enter' and the project is cloned
+
