@@ -10,6 +10,41 @@ The Costly app is here to let a user better organize, display, edit and delete t
 
 # Table of contents
 
+* [User demographic](<https://github.com/Tekali7/Costly#user-demographic>)
+  * [User experience](<https://github.com/Tekali7/Costly#user-experience>)
+* [Agile methodology](<https://github.com/Tekali7/Costly#agile-methodology>)
+  * [Epics and user stories](<>)
+  * [User Authentication and Authorization](<>)
+  * [Expense Management and Validation](<>)
+  * [User Interface, Experience and Feedback](<>)
+* [Features](<>)
+  * [Add expenses](<>)
+  * [Edit expenses](<>)
+  * [Delete expenses](<>)
+  * [Total cost overview](<>)
+  * [User-Friendly Interface](<>)
+  * [Secure authentication](<>)
+  * [Future features](<>)
+  * [Bug Fixes](<>)
+* [Design](<>)
+  * [Color](<>)
+  * [Typography](<>)
+* [Wireframes](<>)
+  * [Entity relationship diagram](<>)
+  * [User interface](<>)
+* [Technology](<>)
+  * [Languages](<>)
+  * [Django Packages](<>)
+  * [Frameworks - Libraries - Programs Used](<>)
+* [Testing](<>)
+* [Project Creation](<>)
+  * [Creating the Django app](<>)
+  * [Deployment of This Project](<>)
+  * [Final Deployment](<>)
+  * [Forking This Project](<>)
+  * [Cloning This Project](<>)
+* [Credits](<>)
+
 # User demographic
 
 The user demographic for an expense tracking app typically includes people from many age groups, families managing household finances, and small business owners tracking business expenses. These users look for ways to gain better control over their finances, track spending habits, and achieve their financial goals.
@@ -100,6 +135,8 @@ Future features might include.
 
 - Bug: User can't add an expense.
   - Working solution: Clean up forms file and add widgets.
+
+Currently no known bugs perceived.
 
 # Design
 ## Color
@@ -242,7 +279,7 @@ The tests can be found [here](<https://github.com/Tekali7/Costly/blob/main/TESTS
 - The delete confirmation modal was adapted from the walkthrough project.
 - The HTML for displaying Django messages was adapted from the walkthrough project.
 - The 10 lines in the base template's main section were adapted from the walkthrough project.
-- The header was adapted from the walkthrough project.
+- The header in the base template was adapted from the walkthrough project.
 
 - I found a lot of information about Django's urls, forms, models etc on the [Django Documentation](<https://docs.djangoproject.com/en/5.0/>).
 - My Mentor Brian Macharia taught me about aggregation, styling and authentication.
