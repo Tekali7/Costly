@@ -120,7 +120,7 @@ To check the Python code [CI Python Linter](https://pep8ci.herokuapp.com/) was u
 | Submit the form without making any changes | The expense remains unchanged. | &#10004; |
 | Edit Expense Feedback | After the user edits an expense, they get confirmation with a message at the top of the page. | &#10004; |
 
-## Test Delete Expense
+## Test Delete Expense(JavaScript)
 | **Test** | **Expected Outcome** | **Result** |
 |---|---|---|
 | Click Delete Button | The delete confirmation modal is displayed. | &#10004; |
@@ -131,6 +131,7 @@ To check the Python code [CI Python Linter](https://pep8ci.herokuapp.com/) was u
 
 
 ## Test Admin Panel
+The admin panel didn't  get a lot of attention during this project because it makes only little sense to apply role-based login or there to be a lot more restricted content for the superuser, because it is only a single user app.
 | **Test** | **Expected Outcome** | **Result** |
 |---|---|---|
 | Log in as an admin/superuser | Successfully access/display the Django admin panel. | &#10004; |
