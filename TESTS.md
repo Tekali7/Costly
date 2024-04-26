@@ -3,7 +3,23 @@
 Return to the README.md file [here](<https://github.com/Tekali7/Costly/blob/main/README.md>).
 
 # Table of contents
-[](<>)
+* [Validation](<https://github.com/Tekali7/Costly/blob/main/TESTS.md#validation>)
+  * [HTML Validation](<https://github.com/Tekali7/Costly/blob/main/TESTS.md#html-validation>)
+  * [CSS Validation](<https://github.com/Tekali7/Costly/blob/main/TESTS.md#css-validation>)
+  * [JavaScript Validation](<https://github.com/Tekali7/Costly/blob/main/TESTS.md#javascript-validation>)
+  * [Python Validation](<https://github.com/Tekali7/Costly/blob/main/TESTS.md#python-validation>)
+* [Manual Testing](<https://github.com/Tekali7/Costly/blob/main/TESTS.md#manual-testing>)
+  * [Test Navigation when logged in](<https://github.com/Tekali7/Costly/blob/main/TESTS.md#test-navigation-when-logged-in>)
+  * [Test Navigation when not logged in](<https://github.com/Tekali7/Costly/blob/main/TESTS.md#test-navigation-when-not-logged-in>)
+  * [Test Login status](<https://github.com/Tekali7/Costly/blob/main/TESTS.md#test-login-status>)
+  * [Test Add Expense](<https://github.com/Tekali7/Costly/blob/main/TESTS.md#test-add-expense>)
+  * [Test Edit Expense](<https://github.com/Tekali7/Costly/blob/main/TESTS.md#test-edit-expense>)
+  * [Test Delete Expense](<https://github.com/Tekali7/Costly/blob/main/TESTS.md#test-delete-expense>)
+  * [Test Admin Panel](<https://github.com/Tekali7/Costly/blob/main/TESTS.md#test-admin-panel>)
+* [Lighthouse Testing](<https://github.com/Tekali7/Costly/blob/main/TESTS.md#lighthouse-testing>)
+
+
+
 
 # Validation
 
@@ -63,6 +79,7 @@ To check the Python code [CI Python Linter](https://pep8ci.herokuapp.com/) was u
 |---|---|---|
 | Navigate to the main page/Log in or click on Logo | The main page of the Cost app is displayed with a list of expenses. | &#10004; |
 | Click on the logout button | The user is logged out and redirected to the login page. | &#10004; |
+| Verify appropriate buttons appears | Logout Button appears when logged in | &#10004; |
 
 
 ## Test Navigation when not logged in
