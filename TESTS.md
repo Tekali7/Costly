@@ -24,7 +24,9 @@ Return to the README.md file [here](<https://github.com/Tekali7/Costly/blob/main
 # Validation
 
 ## HTML Validation
-To check the HTML Files the [W3C Validator](https://validator.w3.org/) was used. Errors due to Django appeared like an error because of curly braces for example.
+To check the HTML Files the [W3C Validator](https://validator.w3.org/) was used. Errors due to Django appeared like errors because of curly braces.
+Unexplainable errors appeared even when validating by URI or by direct input with the page source. But they disappeared when the "/" in the page source was deleted.
+I don't know where this slash appeared from but it doesn't break the app. At the time of this the tutor support was inactive and the issue wasn't anywhere to be found online.
 
 | **File**  | **Result** |
 |---|---|
@@ -90,6 +92,7 @@ To check the Python code [CI Python Linter](https://pep8ci.herokuapp.com/) was u
 | Verify the absence of navigation links | No navigation links except Register and Login are visible since the user is not logged in. | &#10004; |
 | Click on the login button | Redirected to the login page.	 | &#10004; |
 | Click on the register button | Redirected to the signup page. | &#10004; |
+| Finish signing up | New account is created and user is led to the expense list. | &#10004; |
 
 
 ## Test Login status
@@ -106,6 +109,7 @@ To check the Python code [CI Python Linter](https://pep8ci.herokuapp.com/) was u
 | Verify the addition of the expense | The newly added expense is visible in the list of expenses. | &#10004; |
 | Fill out the expense form with invalid data | An error message is displayed, indicating the invalid input. | &#10004; |
 | Submit the form without filling out any fields | An error message is displayed, indicating that all fields are required. | &#10004; |
+| Add Expense Feedback | After the user adds an expense, they get confirmation with a message at the top of the page. | &#10004; |
 
 ## Test Edit Expense
 | **Test** | **Expected Outcome** | **Result** |
@@ -114,6 +118,7 @@ To check the Python code [CI Python Linter](https://pep8ci.herokuapp.com/) was u
 | Modify the expense details | The changes are successfully saved to the database. | &#10004; |
 | Verify the updated expense | The edited expense reflects the changes made. | &#10004; |
 | Submit the form without making any changes | The expense remains unchanged. | &#10004; |
+| Edit Expense Feedback | After the user edits an expense, they get confirmation with a message at the top of the page. | &#10004; |
 
 ## Test Delete Expense
 | **Test** | **Expected Outcome** | **Result** |
@@ -122,6 +127,7 @@ To check the Python code [CI Python Linter](https://pep8ci.herokuapp.com/) was u
 | Confirm deletion of an expense | The expense is successfully deleted from the database. | &#10004; |
 | Verify the removal of the expense | The deleted expense is no longer visible in the list of expenses. | &#10004; |
 | Cancel deletion of an expense | The expense remains unchanged in the database. | &#10004; |
+| Delete Expense Feedback | After the user deletes an expense, they get confirmation with a message at the top of the page. | &#10004; |
 
 
 ## Test Admin Panel

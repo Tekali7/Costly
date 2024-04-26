@@ -136,7 +136,8 @@ Future features might include.
 - Bug: User can't add an expense.
   - Working solution: Clean up forms file and add widgets.
 
-Currently no known bugs perceived.
+Currently theres a bug where a white bar with a slash appears on top of the page.
+I couldn't find the error for this just yet.
 
 # Design
 ## Color
