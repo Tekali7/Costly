@@ -1,10 +1,16 @@
+/*Navbar*/
+
 .navbar-brand {
     font-family: serif;
 }
 
+/*Sections*/
+
 h1 {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+
+/*Expense elements*/
 
 .expenses-list {
     list-style: none;

@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 
 # Create your models here.
 
+
 class Expense(models.Model):
     """
     Model representing an expense in the app.
@@ -14,7 +15,7 @@ class Expense(models.Model):
 
     **Methods**:
 
-    - ``__str__()``: Returns a human-readable string 
+    - ``__str__()``: Returns a human-readable string
     of the expense, displaying the item name.
     """
     user = models.ForeignKey(User, on_delete=models.CASCADE)
@@ -28,12 +29,19 @@ class Expense(models.Model):
         ('CAD', 'CAD'),
         ('CHF', 'CHF'),
     ]
-    currency = models.CharField(max_length=3, choices=currency_choices, default='USD')
-    amount = models.DecimalField(max_digits=10, decimal_places=2)
+    currency = models.CharField(
+        max_length=3,
+        choices=currency_choices,
+        default='USD'
+        )
+    amount = models.DecimalField(
+        max_digits=10,
+        decimal_places=2
+        )
     created_at = models.DateTimeField(auto_now_add=True)
 
     class Meta:
-            ordering = ["-amount"]
+        ordering = ["-amount"]
 
     def __str__(self):
         return self.item

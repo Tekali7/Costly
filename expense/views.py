@@ -8,10 +8,12 @@ from .models import Expense
 from .forms import ExpenseForm
 
 # Create your views here.
+
+
 @login_required
 def index(request):
     """
-    Renders the expense index page with a list of expenses 
+    Renders the expense index page with a list of expenses
     and the sum of costs for the logged-in user.
     User needs to be authenticated.
 
@@ -34,7 +36,6 @@ def index(request):
         "expenses": expenses,
         "total_amount": total_amount,
     })
-
 
 
 @login_required
@@ -72,7 +73,8 @@ def add_expense(request):
     else:
         expense_form = ExpenseForm()
 
-    return render(request, 'expense/add_expense.html', {'expense_form': expense_form})
+    return render(
+        request, 'expense/add_expense.html', {'expense_form': expense_form})
 
 
 @login_required
@@ -91,7 +93,7 @@ def edit_expense(request, edit_id):
 
     ``form``
         An instance of :form:`ExpenseForm` for editing the expense.
-        
+
     ``edit_id``
         The ID of the expense being edited.
 
@@ -113,7 +115,9 @@ def edit_expense(request, edit_id):
     else:
         expense_form = ExpenseForm(instance=expense)
 
-    return render(request, 'expense/edit_expense.html', {'form': expense_form, 'edit_id': edit_id})
+    return render(
+        request, 'expense/edit_expense.html',
+        {'form': expense_form, 'edit_id': edit_id})
 
 
 @login_required
